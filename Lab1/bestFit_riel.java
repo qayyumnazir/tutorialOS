@@ -1,8 +1,8 @@
 public class bestFit_riel{
     public static void main(String[] args){
         System.out.println("Best Fit Algorithm");
-        int blockSize[] = {100, 500, 200, 300, 600}; 
-        int processSize[] = {212, 417, 112, 426};
+        int blockSize[] = {1001, 5001, 2001, 3001, 6002}; 
+        int processSize[] = {2122, 4172, 1122, 4262};
         int bs = blockSize.length;
         int ps = processSize.length;
 
