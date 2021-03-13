@@ -39,7 +39,7 @@ public class FIFO {
 
         for(int i=0;i<round;i+=1)
         {
-            //checking if there is an empty space - james arthur
+            //check kalau dah ada kat frAME 
             boolean masuk=false;
             for(int j=0;j<frame.length;j++)
             {
@@ -51,6 +51,7 @@ public class FIFO {
                 }
                 
 
+                //check kalu ada kosong
                 if (frame[j].equalsIgnoreCase("empty"))
                 {
                     frame[j]=a.removeLast();
@@ -61,6 +62,7 @@ public class FIFO {
             
 
             }
+            //algo if takde
             if(!masuk)
             {
                     if(num>=size)num=0;

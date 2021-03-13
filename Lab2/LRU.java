@@ -34,7 +34,7 @@ public class LRU {
 
         for(int i=0;i<round;i+=1)
         {
-            //checking if there is an empty space - james arthur
+            //checking if it already exist - james arthur
             boolean masuk=false;
             for(int j=0;j<frame.length;j++)
             {
@@ -47,7 +47,7 @@ public class LRU {
 
                     break;
                 }
-                
+                // checking kalau ada ksong
 
                 if (frame[j].equalsIgnoreCase("empty"))
                 {
@@ -61,6 +61,7 @@ public class LRU {
             
 
             }
+            //algo if tkde kosong
             if(!masuk)
             {
                 String temp=susunan.peekFirst();
