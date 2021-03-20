@@ -1,8 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class fifo_riel {
-
+public class fifo_riel{
     public static void main(String[] args){
         Queue<Integer> q = new LinkedList<>();
         int[]k = {1,3,0,3,5,6};
@@ -12,23 +11,20 @@ public class fifo_riel {
     }
 
     public static void pageFault(int [] arr,Queue<Integer> q,int capacity){
-        // for(int i:arr){
-        //     a.add(i);
-        // }
-
-        int[] frame = new int[0];
+        
+        // int[] frame = new int[0];
         int page_fault = 0;
-        int len = frame.length;
+        int len = 0;
 
         for(int i=0;i<arr.length;i++){
             
             if(!q.contains(arr[i])){
-                page_fault++;
-                if(len < capacity){
+                page_fault++; //bila new page, auto add je
+                if(len < capacity){ //bila page capacity penuh, pergi kat else
                     q.add(arr[i]);
                     // System.out.println(len);
                 }
-                else{
+                else{ //buang yang first masuk,add yang paling baru kat belakang
                     q.remove();
                     q.add(arr[i]);
                 }
@@ -41,5 +37,4 @@ public class fifo_riel {
         System.out.println("The final page is: "+q);
 
     }
-
 }
