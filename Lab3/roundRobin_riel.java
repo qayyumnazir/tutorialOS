@@ -3,9 +3,9 @@ public class roundRobin_riel {
         System.out.println("Assume the arrival time for all process is 0");
         int process[] = {1,2,3,4,5};
         int burstTime[] = {6,4,8,3,9};
-        int timeQuantum = 2;
+        int timeSlice = 2; //time quantum
 
-        findAverageTime(process, process.length, burstTime, timeQuantum);
+        findAverageTime(process, process.length, burstTime, timeSlice);
     }
 
     public static void waitingTime(int process[],int numOfProcess,int burstTime[],int waitTime[],int timeQuantum){
